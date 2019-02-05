@@ -30,7 +30,6 @@ class EmployeeList extends React.Component<{}, IEmployeeDataListState> {
             isResizable: true,
             isCollapsible: true,
             data: 'string',
-            onColumnClick: this._onColumnClick,
             onRender: (item: IEmployeData) => {
                 return <div>{item.name}</div>
             },
@@ -45,7 +44,6 @@ class EmployeeList extends React.Component<{}, IEmployeeDataListState> {
             isResizable: true,
             isCollapsible: true,
             data: 'number',
-            onColumnClick: this._onColumnClick,
             onRender: (item: IEmployeData) => {
                 return <div>{item.empID}</div>
             }
@@ -72,7 +70,6 @@ class EmployeeList extends React.Component<{}, IEmployeeDataListState> {
         const {columns, employeeDataList, selectionDetails}= this.state;
         return (
             <Fabric>
-                 <TextField label="Filter by name:" onChange={this._onChangeText} />
                  <div>{selectionDetails}</div>
                 <DetailsList 
                     columns={columns}
