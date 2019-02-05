@@ -74,7 +74,6 @@ class EmployeeList extends React.Component<{}, IEmployeeDataListState> {
                 <DetailsList 
                     columns={columns}
                     items={employeeDataList}
-                    
                 />
             </Fabric>
         );
